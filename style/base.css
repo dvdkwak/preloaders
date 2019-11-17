@@ -1,0 +1,12 @@
+body {
+    background: rgb(255, 255, 255);
+}
+
+.bg-blue {
+  background: rgb(93, 173, 226);
+}
+
+.dkwak-canvas {
+  height: 300px;
+  width: 100%;
+}
