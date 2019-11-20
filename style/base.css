@@ -4,11 +4,11 @@
  * For the styling of the seperate examples see the examples folder
  *
  * The standard used colors or color scheme:
- * #4AF71E
+ * #4AF71E | rgba(74, 247, 30, 1)
  * #DE391B
  * #29B6F6
  * #E3BF14
- * #C829FF
+ * #C829FF | rgba(200, 41, 255)
  */
 
 
@@ -41,7 +41,7 @@ a:hover {
 }
 
 .dkwak-canvas {
-  min-height: 200px;
+  position: relative;
   width: 100%;
 }
 
