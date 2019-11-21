@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
   <!-- Bootstrap 4 -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -33,37 +36,112 @@
   <div class="container-fluid" style="margin-top: 25px;">
     <div class="row">
 
+
+      <!-- BOUNCYBALL -->
       <!-- first collumn with a card inside with the first example -->
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
         <div class="card">
           <!-- title of the loader -->
           <div class="card-header dkwak-bg-secondary">
             Bouncy Ball
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Preview</a>
+                <a id="bouncyball-preview" class="nav-link active" onclick="openOtherTab('bouncyball', 'preview')">Preview</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Html</a>
+                <a id="bouncyball-html" class="nav-link" onclick="openOtherTab('bouncyball', 'html')">Html</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Css</a>
+                <a id="bouncyball-css" class="nav-link" onclick="openOtherTab('bouncyball', 'css')">Css</a>
               </li>
             </ul>
           </div>
           <!-- the loader -->
           <div class="card-body">
+            <!-- In canvas will be loaded the needed content, this changes according to the settings from above -->
             <div class="dkwak-canvas">
-              <preloader id="bouncyball-container">
-                <ball id="bouncyball"></ball>
-              </preloader>
+              <!-- when the setting is set to "preview" -->
+              <span id="bouncyball-show-preview" class="show active">
+                <preloader id="bouncyball-container">
+                  <ball id="bouncyball"></ball>
+                </preloader>
+              </span>
+              <!-- When the setting is set to "html" -->
+              <span id="bouncyball-show-html" class="show">
+                <p class="codeBlock">
+                &lt;<span class="red">preloader</span> <span class="blue">id</span>=<span class="green">"bouncyball-container"</span>&gt;<br>
+                  &nbsp;&nbsp;&lt;<span class="red">ball</span> <span class="blue">id</span>=<span class="green">"bouncyball"</span>&gt;&lt;/<span class="red">ball</span>&gt;<br>
+                &lt;/<span class="red">preloader</span>&gt;
+                </p>
+              </span>
+              <!-- When the setting is set to "css" -->
+              <span id="bouncyball-show-css" class="show">
+                <p class="codeBlock">
+                  <span class="purple">preloader</span><span class="blue">#bouncyball-container</span> {<br>
+                    &nbsp;&nbsp;display: block;<br>
+                    &nbsp;&nbsp;position: relative;<br>
+                    &nbsp;&nbsp;top: <span class="orange">0</span>;<br>
+                    &nbsp;&nbsp;bottom: <span class="orange">0</span>;<br>
+                    &nbsp;&nbsp;width: <span class="orange">50px</span>;<br>
+                    &nbsp;&nbsp;margin: <span class="orange">0</span> auto;<br>
+                    &nbsp;&nbsp;height: auto;<br>
+                  }<br>
+                  <br>
+                  <br>
+                  <span class="purple">ball</span><span class="blue">#bouncyball</span> {<br>
+                    &nbsp;&nbsp;display: block;<br>
+                    &nbsp;&nbsp;position: relative;<br>
+                    &nbsp;&nbsp;background: red;<br>
+                    &nbsp;&nbsp;width: <span class="orange">50px</span>;<br>
+                    &nbsp;&nbsp;height: <span class="orange">50px</span>;<br>
+                    &nbsp;&nbsp;border-radius: <span class="orange">100%</span>;<br>
+                    &nbsp;&nbsp;box-shadow: <span class="orange">0px 100px 10px</span> rgba(0, 0, 0, 0.2);<br>
+                    &nbsp;&nbsp;animation: bounce <span class="orange">1s</span> ease-in-out infinite;<br>
+                  }<br>
+                  <br>
+                  <br>
+                  <span class="purple">@keyframes</span> bounce {<br>
+                    &nbsp;&nbsp;0% {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;width: <span class="orange">50px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;height: <span class="orange">50px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;margin-top: <span class="orange">0</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: <span class="orange">0px 100px 10px -10px</span> rgba(0, 0, 0, 0.2);<br>
+                    &nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;40% {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;width: <span class="orange">50px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;height: <span class="orange">50px</span>;<br>
+                    &nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;50% {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;margin-top: <span class="orange">90px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;width: <span class="orange">60px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;height: <span class="orange">40px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: <span class="orange">0px 10px 10px 0</span> rgba(0, 0, 0, 0.2);<br>
+                    &nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;70% {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;width: <span class="orange">50px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;height: <span class="orange">50px</span>;<br>
+                    &nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;100% {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;width: <span class="orange">50px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;height: <span class="orange">50px</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;margin-top: <span class="orange">0</span>;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: <span class="orange">0px 100px 10px -10px</span> rgba(0, 0, 0, 0.2);<br>
+                    &nbsp;&nbsp;}<br>
+                  }
+                </p>
+              </span>
             </div>
           </div>
         </div> <!-- End of the card -->
       </div> <!-- End of the col -->
+      <!-- END OF BOUNCYBALL -->
 
       <!-- Column to show the "more will be added notice" -->
-      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
         <div class="card dkwak-bg-tertiary coming-soon">
           <div class="card-body">
             <p>More will come!</p>
@@ -79,5 +157,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- own script (container script) -->
+  <script src="js/functions/openOtherTab.js"></script>
 </body>
 </html>

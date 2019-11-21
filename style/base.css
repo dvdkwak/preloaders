@@ -23,6 +23,12 @@ a {
 a:hover {
   color: white;
   background: rgba(74, 247, 30, 1);
+  cursor: pointer;
+}
+
+a.nav-link.active:hover{
+  color: black;
+  cursor: default;
 }
 
 .dkwak-bg-primary {
@@ -66,4 +72,46 @@ a:hover {
 
 .card-header:first-child {
   border-radius: 0px;
+}
+
+span.show {
+  display: none;
+}
+
+span.show.active {
+  display: block;
+}
+
+/* everything which is shown in a codeblock */
+p.codeBlock {
+  background: #212121;
+  color: #E0E0E0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+/* span in codeblock to show red text */
+span.red {
+  color: #FF7043;
+}
+
+/* span in codeblock to show blue text */
+span.blue {
+  color: #64B5F6;
+}
+
+/* span in codeblock to show green text */
+span.green {
+  color: #DCE775;
+}
+
+/* span in codeblock to show purple text */
+span.purple {
+  color: #BA68C8;
+}
+
+
+span.orange  {
+  color: #FFA000;
 }
