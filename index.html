@@ -19,6 +19,7 @@
 
   <!-- CSS per loader -->
   <link rel="stylesheet" href="style/bouncyBall.css">
+  <link rel="stylesheet" href="style/simpleSpinner.css">
 
   <title>Web preloaders</title>
 </head>
@@ -139,6 +140,80 @@
         </div> <!-- End of the card -->
       </div> <!-- End of the col -->
       <!-- END OF BOUNCYBALL -->
+
+
+      <!-- SIMPLESPINNER -->
+      <!-- SECOND COL WITH A SPINNER EXAMPLE -->
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card">
+          <!-- title of the loader -->
+          <div class="card-header dkwak-bg-secondary">
+            Simple Spinner
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a id="simplespinner-preview" class="nav-link active" onclick="openOtherTab('simplespinner', 'preview')">Preview</a>
+              </li>
+              <li class="nav-item">
+                <a id="simplespinner-html" class="nav-link" onclick="openOtherTab('simplespinner', 'html')">Html</a>
+              </li>
+              <li class="nav-item">
+                <a id="simplespinner-css" class="nav-link" onclick="openOtherTab('simplespinner', 'css')">Css</a>
+              </li>
+            </ul>
+          </div>
+          <!-- the loader -->
+          <div class="card-body">
+            <!-- In canvas will be loaded the needed content, this changes according to the settings from above -->
+            <div class="dkwak-canvas">
+              <!-- when the setting is set to "preview" -->
+              <span id="simplespinner-show-preview" class="show active">
+                <!-- Here the code for the simplespinner itself -->
+                <preloader id="simplespinner"></preloader>
+              </span>
+              <!-- When the setting is set to "html" -->
+              <span id="simplespinner-show-html" class="show">
+                <p class="codeBlock">
+                  &lt;<span class="red">preloader</span> <span class="blue">id</span>=<span class="green">"simplespinner"</span>&gt;&lt;/<span class="red">preloader</span>&gt;
+                </p>
+              </span>
+              <!-- When the setting is set to "css" -->
+              <span id="simplespinner-show-css" class="show">
+                <p class="codeBlock">
+                  <span class="purple">preloader</span><span class="blue">#simplespinner</span> {<br>
+                    &nbsp;&nbsp;display: block;<br>
+                    &nbsp;&nbsp;position: relative;<br>
+                    &nbsp;&nbsp;height: <span class="orange">60px</span>;<br>
+                    &nbsp;&nbsp;width: <span class="orange">60px</span>;<br>
+                    &nbsp;&nbsp;background: white;<br>
+                    &nbsp;&nbsp;border: <span class="orange">10px</span> solid;<br>
+                    &nbsp;&nbsp;border-color: red #ddd #ddd #ddd;<br>
+                    &nbsp;&nbsp;border-radius: 100%;<br>
+                    &nbsp;&nbsp;margin: 0 auto;<br>
+                    &nbsp;&nbsp;margin-top: 50px;<br>
+                    &nbsp;&nbsp;animation-name: simplespinner;<br>
+                    &nbsp;&nbsp;animation-duration: 800ms;<br>
+                    &nbsp;&nbsp;animation-fill-mode: forwards;<br>
+                    &nbsp;&nbsp;animation-timing-function: linear;<br>
+                    &nbsp;&nbsp;animation-iteration-count: infinite;<br>
+                  }<br>
+                  <br>
+                  <span class="purple">@keyframes</span> simplespinner {<br>
+                    &nbsp;&nbsp;0%  {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;transform: rotate(0deg);<br>
+                    &nbsp;&nbsp;}<br>
+                    <br>
+                    &nbsp;&nbsp;100% {<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;transform: rotate(360deg);<br>
+                    &nbsp;&nbsp;}<br>
+                  }
+                </p>
+              </span>
+            </div>
+          </div>
+        </div> <!-- End of the card -->
+      </div> <!-- End of the col -->
+      <!-- END OF SIMPLESPINNER -->
+
 
       <!-- Column to show the "more will be added notice" -->
       <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
