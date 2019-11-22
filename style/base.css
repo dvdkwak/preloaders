@@ -74,6 +74,17 @@ a.nav-link.active:hover{
   border-radius: 0px;
 }
 
+/* container where the preloader will be placed */
+.active-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background: white;
+}
+
 span.show {
   display: none;
 }

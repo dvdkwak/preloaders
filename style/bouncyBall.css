@@ -16,7 +16,7 @@ ball#bouncyball {
   height: 50px;
   border-radius: 100%;
   box-shadow: 0px 100px 10px rgba(0, 0, 0, 0.2);
-  animation: bounce 1s ease-in-out infinite;
+  animation: bounce 600ms ease-in-out infinite;
 }
 
 
